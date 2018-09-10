@@ -11,11 +11,11 @@ async function init() {
     await command('git pull --rebase');
     await command(`git checkout ${branchName}`);
     await command('git rebase develop');
-    
+
   } catch(e) {
     console.error('An error baby: ', e);
   }
-
+//
 //  const {stdout} = await command('dir');
 //  console.log('result: ', stdout);
 }
