@@ -7,6 +7,8 @@ async function init() {
     await command('git add .');
     await command('git commit -m "this is the commit" ');
 
+    
+
     await command('git checkout develop');
     await command('git pull --rebase');
     await command(`git checkout ${branchName}`);
@@ -15,7 +17,7 @@ async function init() {
   } catch(e) {
     console.error('An error baby: ', e);
   }
-//
+// test commit
 //  const {stdout} = await command('dir');
 //  console.log('result: ', stdout);
 }
