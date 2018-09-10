@@ -11,7 +11,7 @@ async function init() {
     await command('git pull --rebase');
     await command(`git checkout ${branchName}`);
     await command('git rebase develop');
-
+    await command('git push --force-with-lease');
   } catch(e) {
     console.error('An error baby: ', e);
   }
